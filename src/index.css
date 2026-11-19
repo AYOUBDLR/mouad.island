@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #04060c;
+    color: #f8fafc;
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+.portal-stripe-banner {
+  background: repeating-linear-gradient(
+    -45deg,
+    #0f172a,
+    #0f172a 14px,
+    #1d4ed8 14px,
+    #1d4ed8 28px
+  );
+}
+
+.portal-glow-ring {
+  box-shadow:
+    0 0 32px rgba(37, 99, 235, 0.45),
+    0 0 64px rgba(14, 165, 233, 0.22);
+}
+
+.cta-glow {
+  box-shadow:
+    0 12px 30px -6px rgba(37, 99, 235, 0.55),
+    0 6px 18px -4px rgba(14, 165, 233, 0.35);
+}

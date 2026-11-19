@@ -1,0 +1,6 @@
+{
+  "name": "Love Island Australia — Episode & Access Portal",
+  "description": "Step-by-step interactive episode access, season guide, and high-definition streaming portal for Love Island Australia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
